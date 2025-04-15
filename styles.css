@@ -1,0 +1,240 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estructura general */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #222;
+    color: #f9f9f9;
+}
+
+/* Main */
+main {
+    flex: 1; /* Permite que el contenido principal se expanda */
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative; /* Evita superposiciones no deseadas */
+    bottom: 0;
+}
+
+
+/* Cabecera */
+header {
+    background-color: #004080; /* Azul oscuro */
+    color: white; /* Texto en blanco */
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header #search-form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+header #search-form input[type="text"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222; /* Texto sólido en tema claro */
+    background-color: #f9f9f9; /* Fondo claro del input */
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    width: 60%;
+    max-width: 500px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark header #search-form input[type="text"] {
+    color: #f9f9f9; /* Texto sólido en tema oscuro */
+    background-color: #333; /* Fondo oscuro del input */
+    border: 2px solid #555;
+}
+body.purple header #search-form input[type="text"] {
+    color: #f3f3f3; /* Texto sólido en tema oscuro */
+    background-color: #681b61; /* Fondo oscuro del input */
+    border: 2px solid #63124c;
+}
+
+header #search-form button {
+    padding: 0.8rem 1rem;
+    background-color: #0066cc; /* Azul botón claro */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark header #search-form button {
+    background-color: #444; /* Botón en tema oscuro */
+    color: #f9f9f9;
+}
+body.purple header #search-form button {
+    background-color: #e9c5e4; /* Botón en tema oscuro */
+    color: #0a0a0a;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+header nav ul li a {
+    color: white; /* Texto en blanco */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+body.dark header nav ul li a {
+    color: #f9f9f9; /* Contraste en tema oscuro */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Selector de tema */
+.theme-selector {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.theme-selector .theme-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.theme-selector .theme-option[data-theme="light"] {
+    background-color: #f9f9f9;
+}
+
+.theme-selector .theme-option[data-theme="dark"] {
+    background-color: #333;
+}
+.theme-selector .theme-option[data-theme="purple"] {
+    background-color: #ab13e7;
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+#anuncios {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+body.dark #anuncios {
+    background-color: #333; /* Fondo oscuro en tema oscuro */
+    color: #f9f9f9; /* Texto visible */
+}
+body.purple #anuncios {
+    background-color: #6b1274; /* Fondo purpura en tema purpura */
+    color: #f3f3f3; /* Texto visible */
+}
+#anuncios h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.anuncios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.anuncio {
+    background-color: #f1f1f1; /* Fondo claro */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+body.dark .anuncio {
+    background-color: #444; /* Fondo oscuro */
+    border: 1px solid #555;
+}
+body.purple .anuncio {
+    background-color: #681b61; /* Fondo oscuro */
+    border: 1px solid #63124c;
+}
+
+/* Footer */
+footer {
+    background-color: #222; /* Fondo oscuro del footer */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white; /* Texto visible los temas */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header #search-form input[type="text"] {
+        width: 80%;
+    }
+}

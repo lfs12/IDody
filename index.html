@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDody - Ads Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>IDody</h1>
+            </div>
+            <form id="search-form" action="/search" method="GET">
+                <input type="text" name="query" placeholder="Search ads..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <nav>
+            <div class="theme-selector">
+                <span class="theme-option" data-theme="light" onclick="changeTheme('light')" title="Light"></span>
+                <span class="theme-option" data-theme="dark" onclick="changeTheme('dark')" title="Dark"></span>
+                <span class="theme-option" data-theme="purple" onclick="changeTheme('purple')" title="purple"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="anuncios">
+            <h2>Featured Ads</h2>
+            <div class="anuncios-container">
+                <div class="anuncio">
+                    <img src="path-to-your-image.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Brief description of the product.</p>
+                </div>
+                <div class="anuncio">
+                    <img src="path-to-your-image.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Brief description of the product.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IDody. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeTheme(theme) {
+            document.body.className = theme;
+        }
+    </script>
+</body>
+</html>
