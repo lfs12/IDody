@@ -207,6 +207,13 @@ body.purple #anuncios {
     padding: 1rem;
     text-align: center;
 }
+/* Ajustar imágenes al tamaño del contenedor */
+.anuncio img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
 
 body.dark .anuncio {
     background-color: #444; /* Fondo oscuro */
