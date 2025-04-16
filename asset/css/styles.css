@@ -199,6 +199,17 @@ body.purple #anuncios {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
+/* CSS para las etiquetas <a> en los anuncios */
+.anuncio a {
+    display: block; /* Asegura que el enlace abarque todo el contenido del anuncio */
+    text-decoration: none; /* Elimina subrayados del texto */
+    color: inherit; /* Mantiene el color del texto definido en el contenedor */
+}
+
+.anuncio a:hover {
+    opacity: 0.9; /* Efecto visual al pasar el cursor (opcional) */
+    transition: opacity 0.3s ease; /* Suaviza la transición */
+}
 
 .anuncio {
     background-color: #f1f1f1; /* Fondo claro */
