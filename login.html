@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - IDody</title>
+    <link rel="stylesheet" href="asset/css/styles.css">
+    <link rel="stylesheet" href="asset/css/login-styles.css">
+</head>
+<body>
+    <header class="login-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>IDody Admin</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-card">
+                <h2>Administrator Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            Remember me
+                        </label>
+                        <a href="forgot-password.html">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Sign In</button>
+                </form>
+            </div>
+            
+            <div class="login-footer">
+                <p>Go to <a href="index.html">Store</a></p>
+                <p class="security-info"><span>🔒</span> Secure login with SSL encryption</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="login-footer">
+        <p>&copy; 2025 IDody. All rights reserved.</p>
+    </footer>
+</body>
+</html>
