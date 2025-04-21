@@ -1,0 +1,280 @@
+/* General styles for the admin panel */
+#admin-panel {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#admin-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Responsive grid system */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+}
+
+.col {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+@media (max-width: 1200px) {
+    .col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Form styles */
+#product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#product-form input,
+#product-form textarea,
+#product-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#product-form textarea {
+    grid-column: span 2;
+    resize: vertical;
+}
+
+#product-form button {
+    grid-column: span 2;
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#product-form button:hover {
+    background-color: #003060;
+}
+
+/* File input styles */
+#product-form input[name="image"] {
+    display: none;
+}
+
+#product-form label[for="image"] {
+    grid-column: span 2;
+    padding: 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#product-form label[for="image"]:hover {
+    background-color: #004080;
+}
+
+#image-preview {
+    grid-column: span 2;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+}
+
+/* Filter and sort styles */
+#filter-sort {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#filter-sort input,
+#filter-sort select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* Table styles */
+#product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#product-table th,
+#product-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#product-table th {
+    background-color: #004080;
+    color: white;
+}
+
+#product-table td img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#product-table td button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#product-table td button:hover {
+    opacity: 0.8;
+}
+
+#product-table td button:first-child {
+    background-color: #0066cc;
+    color: white;
+}
+
+#product-table td button:last-child {
+    background-color: #cc0000;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #product-form {
+        grid-template-columns: 1fr;
+    }
+
+    #filter-sort {
+        flex-direction: column;
+    }
+
+    #product-table td img {
+        max-width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #admin-panel h2 {
+        font-size: 1.5rem;
+    }
+
+    #product-form button {
+        font-size: 0.9rem;
+    }
+
+    #filter-sort input,
+    #filter-sort select {
+        font-size: 0.9rem;
+    }
+
+    #product-table th,
+    #product-table td {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 576px) {
+    #product-form {
+        grid-template-columns: 1fr;
+    }
+
+    #filter-sort {
+        flex-direction: column;
+    }
+
+    #product-table td img {
+        max-width: 30px;
+    }
+
+    #product-table th,
+    #product-table td {
+        font-size: 0.8rem;
+    }
+}
