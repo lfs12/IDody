@@ -205,6 +205,12 @@ body.purple #anuncios {
     text-decoration: none; /* Elimina subrayados del texto */
     color: inherit; /* Mantiene el color del texto definido en el contenedor */
 }
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #0066cc; /* Color azul para el precio */
+}
 
 .anuncio a:hover {
     opacity: 0.9; /* Efecto visual al pasar el cursor (opcional) */
