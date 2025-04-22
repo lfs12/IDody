@@ -245,6 +245,10 @@ footer {
     bottom: 0;
     width: 100%;
 }
+footer a {
+    color: rgb(199, 195, 195); /* Texto en blanco */
+    text-decoration: none;
+}
 
 footer p {
     color: white; /* Texto visible los temas */
